@@ -1,0 +1,9 @@
+$(document).ready(
+  function(){
+	  $("button").click(
+	    function(){
+			$.ajax({url:"https://cidian.911cha.com/jiegou_aab.html"});
+		}
+	  );
+  }
+);
