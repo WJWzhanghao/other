@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>悬浮</title>
+	<style type="text/css">
+     #s{width:200px;
+        height: 100px;
+        border: 1px solid #000;
+        display: none;}
+	</style>
+	<script type="text/javascript">
+    window.onload=function(){
+    var btn=document.getElementById('btn');
+    var s=document.getElementById('s');
+      btn.onmouseover=function(){
+      s.style.display="block";
+      }
+      btn.onmouseout=function(){
+      	s.style.display="none";
+      }
+      }
+	</script>
+</head>
+<body>
+<input type="checkbox" id="btn" />
+<div id="s">请注意你的个人安全信息。。。</div>
+</body>
+</html>

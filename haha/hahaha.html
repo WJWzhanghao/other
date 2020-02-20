@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ 	<style type="text/css">  
+ 	
+ 	body{width: 980px; margin:0 auto;}
+     .x1 input{
+     	border: 1px solid green;
+     	width:50px;
+        height: 30px;
+        font-size: 20px;
+        margin-right: 5px;
+}  
+    
+ 	</style>
+ 	<script type="text/javascript">
+     function xy(fuHao){
+     	var x,y,z;
+     x=Number(document.myform.num1.value);
+     y=Number(document.myform.num2.value);
+     if(isNaN(x)||isNaN(y)){
+     	alert("输入非法字符，请重新输入");
+     }else{
+     	switch(fuHao){
+     case "+":z=x+y;break;
+     case "-":z=x-y;break;
+     case "*":z=x*y;break;
+     case "/":
+     if(y==0){z="除数不能为0";}else{z=x/y;}
+     break;
+     }
+   document.myform.result.value=z; 
+     }}
+ 	</script>
+ </head>
+ <body>
+ 
+ <form name="myform" contentEditable="true">
+ <table>
+ <tr>
+ 	<td><img src="images/logo.png" width="50px" /></td>
+ 	<td>简易计算器</td>
+ </tr>
+ <tr>
+ 	<td>第一个数：</td>
+ 	<td><input type="text" name="num1"/></td>
+ </tr>
+ <tr>
+ 	<td>第二个数：</td>
+ 	<td><input type="text" name="num2"/></td>
+ </tr>
+ <tr>
+ 	<td colspan="2" class="x1">
+    <input type="button" value="+" onclick="xy('+')" />
+    <input type="button" value="-" onclick="xy('-')"/>
+    <input type="button" value="*" onclick="xy('*')"/>
+    <input type="button" value="/" onclick="xy('/')"/>
+ 	</td>	
+ </tr>
+ <tr>
+ 	<td align="right">结果：</td>
+ 	<td><input type="text" name="result"></td>
+ </tr>
+ 	</table></form>
+ </body>
+ </html>
