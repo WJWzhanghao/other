@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>安全验证</title>
+	<script type="text/javascript">
+	function f(){
+      var str=document.getElementById("xiao").value;
+      var str1=str.split("-");
+     alert("截取出生年："+str1[0]+"\n"+"月："+str1[1]+"\n"+"日："+str1[2]);
+	}
+</script>
+</head>
+<body>
+<form>
+请输入你的出生年月日：<input type="text" id="xiao"/><br/><br/>
+                <input type="submit" onclick="f()" value="截取出生年月日" />
+</form>	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态时钟</title>
+	<style type="text/css">input{width:200px;height:25px;}</style>
+	<script type="text/javascript">
+    function dongtai(){
+    	var da=new Date();
+        var nian=da.getFullYear();
+        var mon=da.getMonth();
+        var dy=da.getDate();
+    	var ri=da.getDay();
+    	 var hours=da.getHours();
+    	 var min=da.getMinutes();
+    	 var se=da.getSeconds();
+         document.myform.ls.value=nian+"年-"+mon+"月-"+dy+"日  星期"+ri+":"+hours+":"+min+":"+se;
+         setTimeout("dongtai()",1000);
+    }
+   
+
+	</script>
+</head>
+<body onload="dongtai()">
+<form name="myform">
+<h2>
+动态时间：<input type="text" name="ls" size="20"/>
+</h2>
+</form>
+	
+</body>
+</html>

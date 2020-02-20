@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机点数</title>
+	<style type="text/css"></style>
+	<script type="text/javascript">
+     function f1(){
+      var a;
+      a=parseInt(Math.random()*59+1);
+       document.write(a);
+      var v=setTimeout("f1()",60);
+        
+     }
+   function f2() {clearTimeout(v);}
+
+	</script>
+</head>
+<body>
+	<form>
+   <input type="button" onclick="f1()">
+  <input type="button" onclick="f2()">
+</form>
+</body>
+</html>
